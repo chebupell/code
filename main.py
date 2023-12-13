@@ -23,7 +23,10 @@ out_from = 'l'
 next_room = randint(0, 6)
 # перенести на переход персонажа
 
+player_equipment = ['base-armor', 'base-sword']
+
 def dungeon():
+    global player_equipment
     room = Dungeon_room(win_width, win_height)
     room.blit_new_room(out_from, win, next_room)
     hero.blit(win)
